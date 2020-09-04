@@ -13,4 +13,14 @@
     </h1>
     <p>To see output, check console logs</p>
   </body>
+  <script>
+    let count = 0;
+    document.addEventListener("keydown", (e) => {
+      count++;
+      setTimeout(() => count--, 5000);
+      if (count >= 5) {
+        console.log("sticky keys activated");
+      }
+    });
+  </script>
 </html>

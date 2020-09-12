@@ -16,11 +16,12 @@
   <script>
     let count = 0;
     document.addEventListener("keydown", (e) => {
-      count++;
-      setTimeout(() => count--, 5000);
-      if (count >= 5) {
-        console.log("sticky keys activated");
-        count = 0;
+      if (e.key === "Shift") {
+        count++;
+        setTimeout(() => count--, 5000);
+        if (count % 5 === 0) {
+          console.log("sticky keys activated");
+        }
       }
     });
   </script>
